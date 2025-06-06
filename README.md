@@ -11,6 +11,8 @@ The configuration generation is powered by [Pollinations.AI](https://pollination
 
 <a href="https://discord.gg/RKjspnTBmb" target="_blank"><img src="https://s2.loli.net/2025/04/18/CEjdFuZYA4pKsQD.png" alt="Official Discord Server" width="180" height="32"></a>
 
+![Screenshot 2025-06-06 at 21.03.06.png](https://s2.loli.net/2025/06/06/jVRFv8He2WgzOoa.png)
+
 ## Other Projects of Minecraft AI
 
 - [Minecraft AI](https://github.com/aeromechanic000/minecraft-ai) : This implementation is extended from the [MINDcraft](https://github.com/kolbytn/mindcraft) framework and is built on Node.js, utilizing the [Mineflayer](https://github.com/PrismarineJS/mineflayer) API. It provides fast deployment, real-time agent control, and flexible plugin support—making it especially suitable for live demos, interaction-heavy showcases, and rapid experimentation
