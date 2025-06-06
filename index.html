@@ -1164,7 +1164,7 @@
         <div class="main-content">
             <div class="left-panel">
                 <div class="panel-title">
-                    ⚙️ Static Configuration
+                    ⚙️ Native Configuration
                 </div>
 
                 <div class="skin-section">
@@ -1172,7 +1172,7 @@
                         <div class="skin-fields">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label class="form-label">Bot Name</label>
+                                    <label class="form-label">Name</label>
                                     <input type="text" id="bot-name" class="form-input" placeholder="Enter bot name">
                                 </div>
                                 <div class="form-group">
@@ -1252,7 +1252,7 @@
             
             <div class="right-panel">
                 <div class="panel-title">
-                    ⚡ Dynamic Fields
+                    ⚡ Additional Fields
                 </div>
                 
                 <div class="dynamic-field-creator">
@@ -1294,7 +1294,7 @@
                 
                 <div class="dynamic-fields-list">
                     <div class="creator-title">
-                        📋 Current Dynamic Fields
+                        📋 Current  Fields
                     </div>
                     <div id="dynamic-fields-container">
                         <p style="text-align: center; color: #666; font-style: italic;">No dynamic fields added yet</p>
@@ -2264,14 +2264,14 @@ Return ONLY the JSON object, no other text.`;
                     <p>✅ Successfully generated bot configuration:</p>
                     <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.6;">
                         <li><strong>Name:</strong> ${staticData.name || 'Unknown'}</li>
-                        <li><strong>API Provider:</strong> ${staticData.apiProvider || 'Not set'}</li>
-                        <li><strong>Model:</strong> ${staticData.modelName || 'Not set'}</li>
-                        <li><strong>Thinking Time:</strong> ${staticData.thinkingInterval || 30} seconds</li>
-                        <li><strong>Dynamic Fields:</strong> ${dynamicCount}</li>
                     </ul>
                     <div style="margin-top: 15px; padding: 10px; background: #f0f8ff; border-radius: 4px; font-size: 13px;">
-                        <strong>Personality:</strong><br>
+                        <strong>Person Description:</strong><br>
                         ${staticData.personDesc ? staticData.personDesc.substring(0, 200) + (staticData.personDesc.length > 200 ? '...' : '') : 'Not set'}
+                    </div>
+                    <div style="margin-top: 15px; padding: 10px; background: #f0f8ff; border-radius: 4px; font-size: 13px;">
+                        <strong>Longterm Thinking:</strong><br>
+                        ${staticData.longtermThinking ? staticData.longtermThinking.substring(0, 200) + (staticData.longtermThinking.length > 200 ? '...' : '') : 'Not set'}
                     </div>
                     <p style="margin-top: 15px; color: #2e7d32; font-weight: bold;">Ready to apply this configuration?</p>
                 `;
