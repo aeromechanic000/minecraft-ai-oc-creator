@@ -1129,7 +1129,7 @@
                         </svg>
                         Discord Server
                     </a>
-                    <a href="https://github.com/aeromechanic000/flowchart-creator" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://github.com/aeromechanic000/minecraft-ai-oc-creator" target="_blank" rel="noopener noreferrer" class="social-link">
                         <svg class="social-icon" viewBox="0 0 24 24">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
                         </svg>
@@ -1156,7 +1156,7 @@
                 <div class="ai-generator">
                     <input type="text" class="ai-input" id="ai-input" placeholder="Describe your bot (e.g., 'Create a helpful assistant bot for Minecraft servers')">
                     <button id="ai-generate-btn" class="ai-generate-btn">
-                        <span id="ai-btn-text">🤖 Generate Config</span>
+                        <span id="ai-btn-text">🚂 Generate Config</span>
                         <span id="ai-loading-spinner" class="loading-spinner" style="display: none;"></span>
                     </button>
                 </div>
@@ -1186,7 +1186,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Skin File</label>
+                                <label class="form-label">Skin File (./profiles/)</label>
                                 <div class="file-input-group">
                                     <div id="skin-filepath" class="file-path-display">No file selected</div>
                                     <button type="button" class="file-browse-btn" onclick="document.getElementById('skin-file-input').click()">
@@ -1227,7 +1227,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label class="form-label">Thinking Interval (laps)</label>
-                        <input type="number" id="thinking-interval" class="form-input" placeholder="30" min="1" max="300">
+                        <input type="number" id="thinking-interval" class="form-input" placeholder="" min="1" max="100000">
                     </div>
 
                     <div class="form-group">
@@ -1246,7 +1246,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">Model Name</label>
-                        <input type="text" id="model-name" class="form-input" placeholder="e.g., gpt-4, claude-3, llama-2">
+                        <input type="text" id="model-name" class="form-input" placeholder="e.g., gpt-4o, deepseek-chat">
                     </div>
                 </div>
                 
@@ -1279,8 +1279,8 @@
                     </div>
                     <div class="creator-row">
                         <div class="creator-field">
-                            <label class="form-label">Default Value</label>
-                            <input type="text" id="new-field-value" class="form-input" placeholder="Enter default value">
+                            <label class="form-label">Value</label>
+                            <input type="text" id="new-field-value" class="form-input" placeholder="Enter value">
                         </div>
                         <div class="creator-field" style="display: none;" id="options-field">
                             <label class="form-label">Options (comma-separated)</label>
@@ -1344,7 +1344,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label class="form-label">Default Value</label>
+                <label class="form-label">Value</label>
                 <input type="text" id="edit-field-value" class="form-input">
             </div>
             <div class="form-group" style="display: none;" id="edit-options-field">
@@ -2468,7 +2468,7 @@ Return ONLY the JSON object, no other text.`;
                         ${field.type === 'select' && field.options.length > 0 
                             ? `Options: ${field.options.join(', ')}<br>` 
                             : ''}
-                        Default: ${field.value || '<em>No default value</em>'}
+                        ${field.value || '<em>No default value</em>'}
                     </div>
                 </div>
             `).join('');
@@ -2642,9 +2642,10 @@ Return ONLY the JSON object, no other text.`;
                     profile: document.getElementById('person-desc').value.trim(),
                     longterm_thinking: document.getElementById('longterm-thinking').value.trim(),
                     skin: {
-                        file: skinFileInput.files[0] ? skinFileInput.files[0] : null, 
+                        model: document.getElementById('skin-model').value,
+                        file: skinFileInput.files[0] ? `./profiles/${skinFileInput.files[0].name}` : null, 
                     },
-                    self_driven_thinking_timer: (parseInt(document.getElementById('thinking-interval').value) || 30) * 1000, // Convert to milliseconds
+                    self_driven_thinking_timer: document.getElementById('thinking-interval').value ? parseInt(document.getElementById('thinking-interval').value) : null, 
                     provider: mapApiProviderToPython(document.getElementById('api-provider').value),
                     model: document.getElementById('model-name').value.trim()
                 };
@@ -2662,10 +2663,10 @@ Return ONLY the JSON object, no other text.`;
                     name: botName,
                     skin: {
                         model: document.getElementById('skin-model').value,
-                        file: skinFileInput.files[0] ? skinFileInput.files[0] : null, 
+                        file: skinFileInput.files[0] ? `./profiles/${skinFileInput.files[0].name}` : null, 
                     },
                     person_desc: document.getElementById('person-desc').value.trim(),
-                    longterm_thiking: document.getElementById('longterm-thinking').value.trim(), // Note: keeping original typo from example
+                    longterm_thinking: document.getElementById('longterm-thinking').value.trim(), // Note: keeping original typo from example
                     model: {
                         api: document.getElementById('api-provider').value,
                         model: document.getElementById('model-name').value.trim()
@@ -2818,15 +2819,14 @@ Return ONLY the JSON object, no other text.`;
             document.getElementById('model-name').value = config.model || '';
             
             // Handle skin file path
-            if (config.skin && config.skin.file) {
-                const skinPath = extractFilenameFromPath(config.skin.file);
-                skinFilePath.textContent = skinPath;
-                skinFilePath.setAttribute('title', config.skin.file);
+            if (config.skin) {
+                document.getElementById('skin-model').value = config.skin.model || 'classic';
+                if (config.skin.file) {
+                    const skinPath = extractFilenameFromPath(config.skin.file);
+                    skinFilePath.textContent = skinPath;
+                    skinFilePath.setAttribute('title', config.skin.file);
+                }
             }
-            
-            // Set default skin model (Python format doesn't specify, assume classic)
-            document.getElementById('skin-model').value = 'classic';
-            
             // Extract dynamic fields (any additional properties)
             extractDynamicFieldsFromConfig(config, ['username', 'profile', 'longterm_thinking', 'skin', 'self_driven_thinking_timer', 'provider', 'model']);
         }
@@ -2837,8 +2837,8 @@ Return ONLY the JSON object, no other text.`;
             document.getElementById('bot-name').value = config.name || '';
             document.getElementById('person-desc').value = config.person_desc || '';
             
-            // Handle the typo in longterm_thiking vs longterm_thinking
-            const longtermText = config.longterm_thiking || config.longterm_thinking || '';
+            // Handle the typo in longterm_thinking vs longterm_thinking
+            const longtermText = config.longterm_thinking || config.longterm_thinking || '';
             document.getElementById('longterm-thinking').value = longtermText;
             
             // Handle model configuration
@@ -2861,7 +2861,7 @@ Return ONLY the JSON object, no other text.`;
             }
             
             // Extract dynamic fields (any additional properties)
-            extractDynamicFieldsFromConfig(config, ['name', 'person_desc', 'longterm_thiking', 'longterm_thinking', 'skin', 'model', 'thinking_interval']);
+            extractDynamicFieldsFromConfig(config, ['name', 'person_desc', 'longterm_thinking', 'skin', 'model', 'thinking_interval']);
         }
 
         // Load legacy format (original app format)
