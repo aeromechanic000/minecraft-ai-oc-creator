@@ -1,0 +1,3090 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com;
+        connect-src 'self' https://text.pollinations.ai;
+        frame-src 'self' https://www.youtube.com https://trytako.com;
+        child-src 'self';
+        manifest-src 'self';
+        worker-src 'self';
+        upgrade-insecure-requests;
+        block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Original Character for Minecraft AI</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #6d9dc5 0%, #8fbc8f 100%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            min-height: 100vh;
+        }
+
+        .toolbar {
+            background: linear-gradient(135deg, #4a4a4a 0%, #2d2d2d 100%);
+            padding: 15px 20px;
+            border-bottom: 3px solid #8b4513;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border-image: repeating-linear-gradient(
+                90deg,
+                #8b4513 0px,
+                #8b4513 4px,
+                #654321 4px,
+                #654321 8px
+            ) 3;
+            z-index: 10;
+            flex-shrink: 0;
+        }
+        
+        .title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .toolbar h1 {
+            font-size: 20px;
+            color: #ffffff;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-family: 'Courier New', monospace;
+        }
+
+        .minecraft-decoration {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .minecraft-block {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000;
+            position: relative;
+            image-rendering: pixelated;
+        }
+
+        .block-dirt {
+            background: linear-gradient(45deg, #8b4513 25%, #a0522d 25%, #a0522d 50%, #8b4513 50%, #8b4513 75%, #a0522d 75%);
+            background-size: 4px 4px;
+        }
+
+        .block-grass {
+            background: linear-gradient(to bottom, #9acd32 0%, #9acd32 30%, #8b4513 30%, #8b4513 70%, #a0522d 70%);
+        }
+
+        .block-stone {
+            background: linear-gradient(45deg, #696969 25%, #808080 25%, #808080 50%, #696969 50%, #696969 75%, #808080 75%);
+            background-size: 3px 3px;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 160px;
+            gap: 6px;
+            color: #1da1f2;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: 2px solid #1da1f2;
+            transition: all 0.2s;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            white-space: nowrap;
+        }
+
+        .social-link:hover {
+            background: #1da1f2;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(29, 161, 242, 0.4);
+        }
+
+        .social-icon {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+        
+        .toolbar-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .toolbar-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .tool-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            border-radius: 6px;
+            border: 2px solid #8b4513;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .tool-group-label {
+            font-size: 11px;
+            color: #4a4a4a;
+            font-weight: 700;
+            margin-right: 5px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+            font-family: 'Courier New', monospace;
+            white-space: nowrap;
+        }
+
+        .tool-btn {
+            padding: 8px 12px;
+            border: 2px solid #8b4513;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 10px;
+            font-weight: 600;
+            color: #2a2a2a;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.2);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-family: 'Courier New', monospace;
+            white-space: nowrap;
+        }
+
+        .tool-btn:hover {
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .tool-btn.export {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border-color: #2e7d32;
+        }
+
+        .tool-btn.import {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+            border-color: #e65100;
+        }
+
+        .tool-btn.clear {
+            background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+            color: white;
+            border-color: #b71c1c;
+        }
+
+        /* AI Generator Styles */
+        .ai-generator {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .ai-input {
+            flex: 1;
+            min-width: 200px;
+            border: 2px solid #8b4513;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+            background: white;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .ai-input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 0 0 3px rgba(76, 175, 80, 0.2);
+        }
+
+        .ai-generate-btn {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            display: flex;
+            min-width: 180px;
+            line-height: 1.5;
+            color: white;
+            border: 2px solid #e65100;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: all 0.2s;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .ai-generate-btn:hover {
+            background: linear-gradient(135deg, #f57c00 0%, #ef6c00 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .ai-generate-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .ai-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .ai-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .ai-modal-content {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 3px solid #8b4513;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ai-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .ai-modal-title {
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            font-weight: bold;
+            color: #4a4a4a;
+        }
+
+        .ai-modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #9e9e9e;
+            transition: color 0.2s;
+        }
+
+        .ai-modal-close:hover {
+            color: #f44336;
+        }
+
+        .ai-modal-message {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+            border-left: 4px solid #8b4513;
+        }
+
+        .ai-error {
+            border-left-color: #f44336;
+            color: #d32f2f;
+        }
+
+        .ai-modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .ai-modal-btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            transition: all 0.2s;
+        }
+
+        .ai-primary-btn {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border: 2px solid #2e7d32;
+        }
+
+        .ai-primary-btn:hover {
+            background: linear-gradient(135deg, #45a049 0%, #388e3c 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        .ai-secondary-btn {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            color: #4a4a4a;
+            border: 2px solid #9e9e9e;
+        }
+
+        .ai-secondary-btn:hover {
+            background: linear-gradient(135deg, #e0e0e0 0%, #d5d5d5 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            background: linear-gradient(45deg, #e8f4f8 25%, #f0f8ff 25%, #f0f8ff 50%, #e8f4f8 50%, #e8f4f8 75%, #f0f8ff 75%);
+            background-size: 20px 20px;
+            border-left: 3px solid #8b4513;
+            border-right: 3px solid #8b4513;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        .left-panel {
+            width: 50%;
+            padding: 20px;
+            background: rgba(255,255,255,0.9);
+            border-right: 3px solid #8b4513;
+            overflow-y: auto;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .right-panel {
+            width: 50%;
+            padding: 20px;
+            background: rgba(240,248,255,0.9);
+            overflow-y: auto;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .panel-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            color: #4a4a4a;
+            margin-bottom: 8px;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+        }
+
+        .form-input, .form-select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #8b4513;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+            background: white;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.2s;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 0 0 3px rgba(76, 175, 80, 0.2);
+        }
+
+        .form-textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            align-items: flex-end;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .skin-section {
+            background: rgba(255,255,255,0.7);
+            border: 3px solid #8b4513;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .skin-section-header {
+            font-size: 16px;
+            font-weight: bold;
+            color: #4a4a4a;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skin-content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .skin-fields {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .viewer-container {
+            position: relative;
+            width: 250px;
+            border: 3px solid #8b4513;
+            border-radius: 6px;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .skin-preview {
+            width: 100%;
+            height: 220px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #skinViewer {
+            width: 100%;
+            height: 100%;
+            border-radius: 3px;
+        }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+        }
+
+        .loading p {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        .controls {
+            width: 100%;
+            padding: 10px;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .control-btn {
+            flex: 1;
+            padding: 8px 10px;
+            border: 1px solid #8b4513;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            color: #4a4a4a;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: bold;
+            transition: all 0.2s;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            min-width: 50px;
+            height: 40px;
+        }
+
+        .control-btn:hover {
+            background: linear-gradient(135deg, #e0e0e0 0%, #d0d0d0 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .control-btn:active {
+            transform: translateY(0);
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .file-input-group {
+            display: flex;
+            gap: 8px;
+            align-items: stretch;
+        }
+
+        .file-path-display {
+            flex: 1;
+            padding: 10px 12px;
+            border: 2px solid #8b4513;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+            background: #f5f5f5;
+            color: #666;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+
+        .file-browse-btn {
+            padding: 10px 15px;
+            border: 2px solid #8b4513;
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .file-browse-btn:hover {
+            background: linear-gradient(135deg, #f57c00 0%, #ef6c00 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .hidden-file-input {
+            display: none;
+        }
+
+        /* Control buttons row styling */
+        .controls-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .controls-row {
+            flex: 1;
+            padding: 8px 10px;
+            border: 1px solid #8b4513;
+            color: #4a4a4a;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: bold;
+            transition: all 0.2s;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            min-width: 45px;
+            height: 45px;
+        }
+
+        .controls-row .control-btn:hover {
+            background: linear-gradient(135deg, #e0e0e0 0%, #d0d0d0 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .dynamic-field-creator {
+            background: rgba(255,255,255,0.7);
+            border: 3px solid #8b4513;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .creator-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #4a4a4a;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .creator-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: flex-end;
+        }
+
+        .creator-row:last-child {
+            margin-bottom: 0;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .creator-field {
+            flex: 1;
+        }
+
+        .creator-field.small {
+            flex: 0 0 120px;
+        }
+
+        .add-btn {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border: 2px solid #2e7d32;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .add-btn:hover {
+            background: linear-gradient(135deg, #45a049 0%, #388e3c 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .dynamic-fields-list {
+            background: rgba(255,255,255,0.7);
+            border: 3px solid #8b4513;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .dynamic-field-item {
+            background: white;
+            border: 2px solid #8b4513;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.2s;
+        }
+
+        .dynamic-field-item:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: translateY(-1px);
+        }
+
+        .field-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .field-title {
+            font-weight: bold;
+            color: #4a4a4a;
+            font-size: 14px;
+        }
+
+        .field-type {
+            background: #e8f5e8;
+            color: #2e7d32;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .field-actions {
+            display: flex;
+            gap: 5px;
+        }
+
+        .action-btn {
+            padding: 4px 8px;
+            border: 1px solid;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: bold;
+            transition: all 0.2s;
+            font-family: 'Courier New', monospace;
+        }
+
+        .edit-btn {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+            border-color: #e65100;
+        }
+
+        .delete-btn {
+            background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+            color: white;
+            border-color: #b71c1c;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .field-value {
+            color: #666;
+            font-size: 12px;
+            margin-top: 4px;
+            word-wrap: break-word;
+        }
+
+        .status-bar {
+            background: linear-gradient(135deg, #4a4a4a 0%, #2d2d2d 100%);
+            padding: 12px 20px;
+            font-size: 12px;
+            color: #ffffff;
+            border-top: 3px solid #8b4513;
+            font-family: 'Courier New', monospace;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+            z-index: 10;
+            min-height: 60px;
+            flex-shrink: 0;
+            border-left: 3px solid #8b4513;
+            border-right: 3px solid #8b4513;
+            border-bottom: 3px solid #8b4513;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 20px;
+            align-items: center;
+            height: 100%;
+        }
+
+        .status-main {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .status-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: right;
+        }
+
+        .status-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: right;
+        }
+
+        .status-label {
+            color: #ccc;
+            font-size: 10px;
+        }
+
+        .status-value {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 3px solid #8b4513;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .modal-title {
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            font-weight: bold;
+            color: #4a4a4a;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #9e9e9e;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #f44336;
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .modal-btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            transition: all 0.2s;
+            border: 2px solid;
+        }
+
+        .modal-btn.primary {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border-color: #2e7d32;
+        }
+
+        .modal-btn.secondary {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            color: #4a4a4a;
+            border-color: #9e9e9e;
+        }
+
+        .modal-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .social-links {
+                gap: 8px;
+            }
+            
+            .social-link {
+                min-width: 120px;
+                font-size: 10px;
+                padding: 5px 8px;
+            }
+            
+            .ai-generator {
+                flex-direction: column;
+                gap: 8px;
+                align-items: stretch;
+            }
+            
+            .ai-generate-btn {
+                min-width: auto;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .toolbar {
+                padding: 10px 15px;
+            }
+            
+            .title-bar {
+                flex-direction: column;
+                gap: 10px;
+                align-items: stretch;
+            }
+            
+            .toolbar h1 {
+                text-align: center;
+                font-size: 18px;
+            }
+            
+            .social-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .social-link {
+                min-width: 140px;
+                font-size: 11px;
+            }
+            
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .left-panel, .right-panel {
+                width: 100%;
+                height: auto;
+                min-height: 50vh;
+            }
+            
+            .skin-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .viewer-container {
+                align-self: center;
+            }
+
+            .status-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .status-info, .status-stats {
+                text-align: left;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .creator-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .creator-field.small {
+                flex: 1;
+            }
+
+            .controls-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .controls-row .control-btn {
+                flex: none;
+                width: 100%;
+            }
+        }
+
+        /* Scrollbar styling for webkit browsers */
+        .left-panel::-webkit-scrollbar,
+        .right-panel::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .left-panel::-webkit-scrollbar-track,
+        .right-panel::-webkit-scrollbar-track {
+            background: rgba(139, 69, 19, 0.1);
+            border-radius: 4px;
+        }
+
+        .left-panel::-webkit-scrollbar-thumb,
+        .right-panel::-webkit-scrollbar-thumb {
+            background: rgba(139, 69, 19, 0.5);
+            border-radius: 4px;
+        }
+
+        .left-panel::-webkit-scrollbar-thumb:hover,
+        .right-panel::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 69, 19, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="toolbar">
+            <div class="title-bar">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <h1>🪄 Original Character for Minecraft AI</h1>
+                    <div class="minecraft-decoration">
+                        <div class="minecraft-block block-grass"></div>
+                        <div class="minecraft-block block-dirt"></div>
+                        <div class="minecraft-block block-stone"></div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://discord.gg/RKjspnTBmb" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <path d="M19.952,5.672c-1.904-1.531-4.916-1.79-5.044-1.801c-0.201-0.017-0.392,0.097-0.474,0.281 c-0.006,0.012-0.072,0.163-0.145,0.398c1.259,0.212,2.806,0.64,4.206,1.509c0.224,0.139,0.293,0.434,0.154,0.659 c-0.09,0.146-0.247,0.226-0.407,0.226c-0.086,0-0.173-0.023-0.252-0.072C15.584,5.38,12.578,5.305,12,5.305S8.415,5.38,6.011,6.872 c-0.225,0.14-0.519,0.07-0.659-0.154c-0.14-0.225-0.07-0.519,0.154-0.659c1.4-0.868,2.946-1.297,4.206-1.509 c-0.074-0.236-0.14-0.386-0.145-0.398C9.484,3.968,9.294,3.852,9.092,3.872c-0.127,0.01-3.139,0.269-5.069,1.822 C3.015,6.625,1,12.073,1,16.783c0,0.083,0.022,0.165,0.063,0.237c1.391,2.443,5.185,3.083,6.05,3.111c0.005,0,0.01,0,0.015,0 c0.153,0,0.297-0.073,0.387-0.197l0.875-1.202c-2.359-0.61-3.564-1.645-3.634-1.706c-0.198-0.175-0.217-0.477-0.042-0.675 c0.175-0.198,0.476-0.217,0.674-0.043c0.029,0.026,2.248,1.909,6.612,1.909c4.372,0,6.591-1.891,6.613-1.91 c0.198-0.172,0.5-0.154,0.674,0.045c0.174,0.198,0.155,0.499-0.042,0.673c-0.07,0.062-1.275,1.096-3.634,1.706l0.875,1.202 c0.09,0.124,0.234,0.197,0.387,0.197c0.005,0,0.01,0,0.015,0c0.865-0.027,4.659-0.667,6.05-3.111 C22.978,16.947,23,16.866,23,16.783C23,12.073,20.985,6.625,19.952,5.672z M8.891,14.87c-0.924,0-1.674-0.857-1.674-1.913 s0.749-1.913,1.674-1.913s1.674,0.857,1.674,1.913S9.816,14.87,8.891,14.87z M15.109,14.87c-0.924,0-1.674-0.857-1.674-1.913 s0.749-1.913,1.674-1.913c0.924,0,1.674,0.857,1.674,1.913S16.033,14.87,15.109,14.87z"></path>
+                        </svg>
+                        Discord Server
+                    </a>
+                    <a href="https://github.com/aeromechanic000/flowchart-creator" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                        </svg>
+                        GitHub Repository 
+                    </a>
+                    <a href="https://x.com/aeromechan71402" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                        </svg>
+                        @aeromechan71402
+                    </a>
+                </div>
+            </div>
+            
+            <div class="toolbar-row">
+                <div class="tool-group">
+                    <span class="tool-group-label">📦 File</span>
+                    <button onclick="exportConfiguration()" class="tool-btn export">Export JSON</button>
+                    <input type="file" id="import-json" accept=".json" style="display: none;" onchange="importConfiguration(this)">
+                    <button onclick="document.getElementById('import-json').click()" class="tool-btn import">Import JSON</button>
+                    <button onclick="clearConfiguration()" class="tool-btn clear">Clear All</button>
+                </div>
+
+                <div class="ai-generator">
+                    <input type="text" class="ai-input" id="ai-input" placeholder="Describe your bot (e.g., 'Create a helpful assistant bot for Minecraft servers')">
+                    <button id="ai-generate-btn" class="ai-generate-btn">
+                        <span id="ai-btn-text">🤖 Generate Config</span>
+                        <span id="ai-loading-spinner" class="loading-spinner" style="display: none;"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="panel-title">
+                    ⚙️ Static Configuration
+                </div>
+
+                <div class="skin-section">
+                    <div class="skin-content">
+                        <div class="skin-fields">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Bot Name</label>
+                                    <input type="text" id="bot-name" class="form-input" placeholder="Enter bot name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Skin Model</label>
+                                    <select id="skin-model" class="form-select">
+                                        <option value="classic">Classic</option>
+                                        <option value="slim">Slim</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Skin File</label>
+                                <div class="file-input-group">
+                                    <div id="skin-filepath" class="file-path-display">No file selected</div>
+                                    <button type="button" class="file-browse-btn" onclick="document.getElementById('skin-file-input').click()">
+                                        📂 Browse
+                                    </button>
+                                    <input type="file" id="skin-file-input" class="hidden-file-input" accept=".png,.jpg,.jpeg" onchange="handleSkinFileSelect(this)">
+                                </div>
+                            </div>
+                            <div class="controls-row">
+                                <button id="rotateLeft" class="control-btn">↻ Left</button>
+                                <button id="rotateRight" class="control-btn">↺ Right</button>
+                                <button id="toggleRun" class="control-btn">🏃 Walk</button>
+                                <button id="resetView" class="control-btn">🔄 Reset</button>
+                            </div>
+                        </div>
+                        <div class="viewer-container">
+                            <div class="skin-preview">
+                                <canvas id="skinViewer"></canvas>
+                                <div class="loading" id="loadingText">
+                                    <div class="loading-spinner"></div>
+                                    <p>Loading...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Person Description</label>
+                    <textarea id="person-desc" class="form-input form-textarea" placeholder="Describe the bot's personality and characteristics"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Long-term Thinking</label>
+                    <textarea id="longterm-thinking" class="form-input form-textarea" placeholder="Describe the bot's long-term goals and thinking patterns"></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Thinking Interval (laps)</label>
+                        <input type="number" id="thinking-interval" class="form-input" placeholder="30" min="1" max="300">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">API Provider</label>
+                        <select id="api-provider" class="form-select">
+                            <option value="">Select API provider</option>
+                            <option value="openai">OpenAI</option>
+                            <option value="anthropic">Anthropic</option>
+                            <option value="google">Google</option>
+                            <option value="deepseek">DeepSeek</option>
+                            <option value="pollinations">Pollinations</option>
+                            <option value="ollama">Ollama</option>
+                            <option value="qwen">Qwen</option>
+                            <option value="doubao">Doubao</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Model Name</label>
+                        <input type="text" id="model-name" class="form-input" placeholder="e.g., gpt-4, claude-3, llama-2">
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="right-panel">
+                <div class="panel-title">
+                    ⚡ Dynamic Fields
+                </div>
+                
+                <div class="dynamic-field-creator">
+                    <div class="creator-title">
+                        ➕ Add New Field
+                    </div>
+                    <div class="creator-row">
+                        <div class="creator-field">
+                            <label class="form-label">Field Name</label>
+                            <input type="text" id="new-field-name" class="form-input" placeholder="Enter field name">
+                        </div>
+                        <div class="creator-field small">
+                            <label class="form-label">Type</label>
+                            <select id="new-field-type" class="form-select">
+                                <option value="text">Text</option>
+                                <option value="number">Number</option>
+                                <option value="boolean">Boolean</option>
+                                <option value="textarea">Textarea</option>
+                                <option value="select">Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="creator-row">
+                        <div class="creator-field">
+                            <label class="form-label">Default Value</label>
+                            <input type="text" id="new-field-value" class="form-input" placeholder="Enter default value">
+                        </div>
+                        <div class="creator-field" style="display: none;" id="options-field">
+                            <label class="form-label">Options (comma-separated)</label>
+                            <input type="text" id="new-field-options" class="form-input" placeholder="option1, option2, option3">
+                        </div>
+                    </div>
+                    <div class="creator-row">
+                        <button onclick="addDynamicField()" class="add-btn">
+                            ➕ Add Field
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="dynamic-fields-list">
+                    <div class="creator-title">
+                        📋 Current Dynamic Fields
+                    </div>
+                    <div id="dynamic-fields-container">
+                        <p style="text-align: center; color: #666; font-style: italic;">No dynamic fields added yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            <div class="status-grid">
+                <div class="status-main">
+                    <span id="status-text">🌟 Ready - Configure your Minecraft bot! 🌟</span>
+                </div>
+                <div class="status-info">
+                    <div class="status-label">CONFIGURATION STATUS</div>
+                    <div class="status-value" id="config-status">Empty</div>
+                </div>
+                <div class="status-stats">
+                    <div class="status-label">CURRENT SESSION</div>
+                    <div class="status-value" id="session-info">Fields: 0 | Skin: Not Set</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit Field Modal -->
+    <div class="modal" id="edit-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">✏️ Edit Field</h3>
+                <button class="modal-close" onclick="closeEditModal()">×</button>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Field Name</label>
+                <input type="text" id="edit-field-name" class="form-input">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Type</label>
+                <select id="edit-field-type" class="form-select">
+                    <option value="text">Text</option>
+                    <option value="number">Number</option>
+                    <option value="boolean">Boolean</option>
+                    <option value="textarea">Textarea</option>
+                    <option value="select">Select</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Default Value</label>
+                <input type="text" id="edit-field-value" class="form-input">
+            </div>
+            <div class="form-group" style="display: none;" id="edit-options-field">
+                <label class="form-label">Options (comma-separated)</label>
+                <input type="text" id="edit-field-options" class="form-input">
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn secondary" onclick="closeEditModal()">Cancel</button>
+                <button class="modal-btn primary" onclick="saveEditedField()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Generation Modal -->
+    <div class="ai-modal" id="ai-modal">
+        <div class="ai-modal-content">
+            <div class="ai-modal-header">
+                <h3 class="ai-modal-title">🤖 AI Bot Configuration</h3>
+                <button class="ai-modal-close" onclick="closeAIModal()">×</button>
+            </div>
+            <div class="ai-modal-message" id="ai-modal-message">
+                Generating your bot configuration...
+            </div>
+            <div class="ai-modal-actions">
+                <button class="ai-modal-btn ai-secondary-btn" onclick="closeAIModal()">Cancel</button>
+                <button class="ai-modal-btn ai-primary-btn" id="ai-apply-btn" onclick="applyAIConfiguration()">Apply Configuration</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let dynamicFields = [];
+        let editingFieldIndex = -1;
+        let generatedConfigData = null;
+        
+        // 3D Scene variables
+        let scene, camera, renderer, playerModel;
+        let isRunning = false;
+        let currentSkinTexture = null;
+        let uploadedSkinData = null; // Store uploaded skin data
+        let uploadedSkinCanvas = null; // Store clean canvas for overlay detection
+        let container;
+        
+        // Animation control variables
+        let rotationAngle = 0;
+        let rightArmPivot, leftArmPivot, rightLegPivot, leftLegPivot;
+
+        // Skin mapping data from the provided coordinates
+        const skinMap = {
+            "overall": [0, 0, 64, 64],
+            "face": [8, 8, 8, 8],
+            "top_of_head": [8, 0, 8, 8],
+            "bottom_of_head": [16, 0, 8, 8],
+            "right_head": [0, 8, 8, 8],
+            "left_head": [16, 8, 8, 8],
+            "back_head": [24, 8, 8, 8],
+            "top_of_helmet": [40, 0, 8, 8],
+            "bottom_of_helmet": [48, 0, 8, 8],
+            "right_helmet": [32, 8, 8, 8],
+            "front_helmet": [40, 8, 8, 8],
+            "left_helmet": [48, 8, 8, 8],
+            "back_helmet": [56, 8, 8, 8],
+            "top_of_right_leg": [4, 16, 4, 4],
+            "right_foot": [8, 16, 4, 4],
+            "outside_of_right_leg": [0, 20, 4, 12],
+            "front_right_leg": [4, 20, 4, 12],
+            "inside_right_leg": [8, 20, 4, 12],
+            "back_right_leg": [12, 20, 4, 12],
+            "top_of_torso": [20, 16, 8, 4],
+            "bottom_of_torso": [28, 16, 8, 4],
+            "right_torse": [16, 20, 4, 12],
+            "front_torso": [20, 20, 8, 12],
+            "left_torso": [28, 20, 4, 12],
+            "back_torso": [32, 20, 8, 12],
+            "top_of_right_arm": [44, 16, 4, 4],
+            "right_hand": [48, 16, 4, 4],
+            "outside_of_right_arm": [40, 20, 4, 12],
+            "front_right_arm": [44, 20, 4, 12],
+            "inside_right_arm": [48, 20, 4, 12],
+            "back_right_arm": [52, 20, 4, 12],
+            "top_of_right_leg_outer": [4, 32, 4, 4],
+            "right_foot_outer": [8, 32, 4, 4],
+            "outside_of_right_leg_outer": [0, 36, 4, 12],
+            "front_right_leg_outer": [4, 36, 4, 12],
+            "inside_right_leg_outer": [8, 36, 4, 12],
+            "back_right_leg_outer": [12, 36, 4, 12],
+            "top_of_torso_outer": [20, 32, 8, 4],
+            "bottom_of_torso_outer": [28, 32, 8, 4],
+            "right_torso_outer": [16, 36, 4, 12],
+            "front_torso_outer": [20, 36, 8, 12],
+            "left_torso_outer": [28, 36, 4, 12],
+            "back_torso_outer": [32, 36, 8, 12],
+            "top_of_right_arm_outer": [44, 32, 4, 4],
+            "right_hand_outer": [48, 32, 4, 4],
+            "outside_of_right_arm_outer": [40, 36, 4, 12],
+            "front_right_arm_outer": [44, 36, 4, 12],
+            "inside_right_arm_outer": [48, 36, 4, 12],
+            "back_right_arm_outer": [52, 36, 4, 12],
+            "top_of_left_leg_outer": [4, 48, 4, 4],
+            "left_foot_outer": [8, 48, 4, 4],
+            "outside_of_left_leg_outer": [0, 52, 4, 12],
+            "front_left_leg_outer": [4, 52, 4, 12],
+            "inside_left_leg_outer": [8, 52, 4, 12],
+            "back_left_leg_outer": [12, 52, 4, 12],
+            "top_of_left_leg": [20, 48, 4, 4],
+            "left_foot": [24, 48, 4, 4],
+            "outside_of_left_leg": [16, 52, 4, 12],
+            "front_left_leg": [20, 52, 4, 12],
+            "inside_left_leg": [24, 52, 4, 12],
+            "back_left_leg": [28, 52, 4, 12],
+            "top_of_left_arm": [36, 48, 4, 4],
+            "left_hand": [40, 48, 4, 4],
+            "outside_of_left_arm": [32, 52, 4, 12],
+            "front_left_arm": [36, 52, 4, 12],
+            "inside_left_arm": [40, 52, 4, 12],
+            "back_left_arm": [44, 52, 4, 12],
+            "top_of_left_arm_outer": [52, 48, 4, 4],
+            "left_hand_outer": [56, 48, 4, 4],
+            "outside_of_left_arm_outer": [48, 52, 4, 12],
+            "front_left_arm_outer": [52, 52, 4, 12],
+            "inside_left_arm_outer": [56, 52, 4, 12],
+            "back_left_arm_outer": [60, 52, 4, 12]
+        };
+
+        // DOM elements
+        const newFieldType = document.getElementById('new-field-type');
+        const optionsField = document.getElementById('options-field');
+        const editFieldType = document.getElementById('edit-field-type');
+        const editOptionsField = document.getElementById('edit-options-field');
+        const statusText = document.getElementById('status-text');
+        const configStatus = document.getElementById('config-status');
+        const sessionInfo = document.getElementById('session-info');
+        const fieldCount = document.getElementById('field-count');
+        const dynamicFieldsContainer = document.getElementById('dynamic-fields-container');
+        const editModal = document.getElementById('edit-modal');
+        const skinFilePath = document.getElementById('skin-filepath');
+        const aiInput = document.getElementById('ai-input');
+        const aiGenerateBtn = document.getElementById('ai-generate-btn');
+        const aiLoadingSpinner = document.getElementById('ai-loading-spinner');
+        const aiBtnText = document.getElementById('ai-btn-text');
+        const aiModal = document.getElementById('ai-modal');
+        const aiModalMessage = document.getElementById('ai-modal-message');
+        const aiApplyBtn = document.getElementById('ai-apply-btn');
+
+        // Initialize 3D viewer when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            container = document.querySelector('.skin-preview');
+            initScene();
+            setupControlButtons();
+            
+            // Initialize other components
+            setupEventListeners();
+            updateConfigStatus();
+            updateStatus('🌟 Ready - Configure your Minecraft bot! 🌟');
+        });
+
+        function initScene() {
+            // Create scene
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x2a2a2a);
+            
+            // Create camera - positioned further back to show whole body
+            camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+            camera.position.set(0, 0.5, 4.5); // Moved further back and slightly lower
+            
+            // Create renderer
+            renderer = new THREE.WebGLRenderer({ 
+                canvas: document.getElementById('skinViewer'),
+                antialias: true 
+            });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+            
+            // Add lighting
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+            scene.add(ambientLight);
+            
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.set(5, 10, 5);
+            directionalLight.castShadow = true;
+            directionalLight.shadow.mapSize.width = 1024;
+            directionalLight.shadow.mapSize.height = 1024;
+            scene.add(directionalLight);
+            
+            // Load default skin (check for uploaded first, then steve.png, then fallback)
+            loadDefaultSkin();
+            
+            // Start animation loop
+            animate();
+            
+            // Handle window resize
+            window.addEventListener('resize', onWindowResize);
+        }
+
+        function loadDefaultSkin() {
+            // First priority: Check if we have uploaded skin data
+            if (uploadedSkinData) {
+                console.log('Using previously uploaded skin data');
+                createMinecraftModelWithTexture(uploadedSkinData, 0.9);
+                document.getElementById('loadingText').style.display = 'none';
+                updateStatus('🎨 Using uploaded skin texture');
+                return;
+            }
+            
+            // Second priority: Try to load default steve.png skin
+            const img = new Image();
+            img.onload = function() {
+                console.log('Steve skin loaded successfully');
+                const canvas = document.createElement('canvas');
+                canvas.width = 64;
+                canvas.height = 64;
+                const ctx = canvas.getContext('2d');
+                
+                // Draw and scale the image to 64x64
+                ctx.imageSmoothingEnabled = false; // Keep pixelated look
+                ctx.drawImage(img, 0, 0, 64, 64);
+                
+                const texture = new THREE.CanvasTexture(canvas);
+                texture.magFilter = THREE.NearestFilter;
+                texture.minFilter = THREE.NearestFilter;
+                texture.flipY = false; // Important for Minecraft skins
+                
+                // Create the player model with steve skin
+                createMinecraftModelWithTexture(texture, 0.9);
+                
+                document.getElementById('loadingText').style.display = 'none';
+                updateStatus('👤 Default Steve skin loaded');
+            };
+            
+            img.onerror = function() {
+                console.log('Steve skin not found, creating green robot fallback');
+                createDefaultGreenRobot();
+            };
+            
+            // Try to load the default steve.png skin
+            img.src = './steve.png';
+        }
+
+        function createDefaultGreenRobot() {
+            // Create all-green robot texture as fallback
+            const canvas = document.createElement('canvas');
+            canvas.width = 64;
+            canvas.height = 64;
+            const ctx = canvas.getContext('2d');
+            
+            // Fill with different shades of green for a robot look
+            ctx.fillStyle = '#2E7D32'; // Dark green base
+            ctx.fillRect(0, 0, 64, 64);
+            
+            // Add robot-like patterns
+            ctx.fillStyle = '#4CAF50'; // Medium green
+            ctx.fillRect(8, 8, 8, 8); // Head highlights
+            ctx.fillRect(24, 8, 8, 8);
+            
+            ctx.fillStyle = '#81C784'; // Light green
+            ctx.fillRect(10, 10, 2, 2); // Eyes (green glow)
+            ctx.fillRect(14, 10, 2, 2);
+            
+            ctx.fillStyle = '#1B5E20'; // Very dark green
+            ctx.fillRect(12, 12, 2, 1); // Mouth line
+            
+            // Body patterns
+            ctx.fillStyle = '#388E3C';
+            ctx.fillRect(20, 20, 8, 12); // Chest panel
+            ctx.fillRect(4, 20, 4, 12); // Arms
+            ctx.fillRect(28, 20, 4, 12);
+            
+            ctx.fillStyle = '#2E7D32';
+            ctx.fillRect(20, 32, 8, 12); // Lower body
+            ctx.fillRect(4, 52, 4, 12); // Legs
+            ctx.fillRect(28, 52, 4, 12);
+            
+            // Add some circuit-like patterns
+            ctx.fillStyle = '#66BB6A';
+            ctx.fillRect(22, 22, 1, 8); // Vertical line
+            ctx.fillRect(20, 24, 8, 1); // Horizontal line
+            ctx.fillRect(25, 22, 1, 8); // Another vertical line
+            
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.magFilter = THREE.NearestFilter;
+            texture.minFilter = THREE.NearestFilter;
+            
+            // Create the player model with green robot skin
+            createMinecraftModelWithTexture(texture, 0.9);
+            
+            document.getElementById('loadingText').style.display = 'none';
+            updateStatus('🤖 Default green robot skin loaded (no custom skin uploaded)');
+        }
+
+        function createMinecraftModelWithTexture(texture, scale = 1.0) {
+            // Remove existing model
+            if (playerModel) {
+                scene.remove(playerModel);
+            }
+            
+            // Create a main group for the model
+            playerModel = new THREE.Group();
+            
+            // Constants for position adjustments (scaled to 1/8 and then by scale factor)
+            const s = scale; // Scale factor
+            const HEAD_HEIGHT = (8/8) * s;
+            const BODY_HEIGHT = (12/8) * s;
+            const BODY_POSITION_Y = (4/8) * s;
+            const HEAD_POSITION_Y = BODY_POSITION_Y + (BODY_HEIGHT/2) + (HEAD_HEIGHT/2); 
+            
+            // Calculate leg position to connect with bottom of torso
+            const LEG_HEIGHT = (12/8) * s;
+            const LEG_POSITION_Y = BODY_POSITION_Y - (BODY_HEIGHT/2) - (LEG_HEIGHT/2);
+            
+            // Create the head with proper UV mapping
+            const headGeo = new THREE.BoxGeometry((8/8) * s, (8/8) * s, (8/8) * s);
+            const headMats = createBoxFaceMaterials(texture, [
+                skinMap.left_head,   // right side
+                skinMap.right_head,  // left side
+                skinMap.top_of_head, // top
+                skinMap.bottom_of_head, // bottom
+                skinMap.face,        // front
+                skinMap.back_head    // back
+            ]);
+            const head = new THREE.Mesh(headGeo, headMats);
+            head.position.y = HEAD_POSITION_Y;
+            head.castShadow = true;
+            head.receiveShadow = true;
+            playerModel.add(head);
+            
+            // Optional: Add helmet/overlay layer if present in the skin
+            const helmetGeo = new THREE.BoxGeometry((8.5/8) * s, (8.5/8) * s, (8.5/8) * s);
+            const helmetMats = createBoxFaceMaterials(texture, [
+                skinMap.left_helmet,   // right side
+                skinMap.right_helmet,  // left side
+                skinMap.top_of_helmet, // top
+                skinMap.bottom_of_helmet, // bottom
+                skinMap.front_helmet,  // front
+                skinMap.back_helmet    // back
+            ], true);
+            const helmet = new THREE.Mesh(helmetGeo, helmetMats);
+            helmet.position.copy(head.position);
+            playerModel.add(helmet);
+            
+            // Create body
+            const bodyGeo = new THREE.BoxGeometry((8/8) * s, (12/8) * s, (4/8) * s);
+            const bodyMats = createBoxFaceMaterials(texture, [
+                skinMap.left_torso,    // right
+                skinMap.right_torse,   // left
+                skinMap.top_of_torso,  // top
+                skinMap.bottom_of_torso, // bottom
+                skinMap.front_torso,   // front
+                skinMap.back_torso     // back
+            ]);
+            const body = new THREE.Mesh(bodyGeo, bodyMats);
+            body.position.y = BODY_POSITION_Y;
+            body.castShadow = true;
+            body.receiveShadow = true;
+            playerModel.add(body);
+            
+            // Create body outer layer
+            const bodyOuterGeo = new THREE.BoxGeometry((8.5/8) * s, (12.5/8) * s, (4.5/8) * s);
+            const bodyOuterMats = createBoxFaceMaterials(texture, [
+                skinMap.left_torso_outer,    // right
+                skinMap.right_torso_outer,   // left
+                skinMap.top_of_torso_outer,  // top
+                skinMap.bottom_of_torso_outer, // bottom
+                skinMap.front_torso_outer,   // front
+                skinMap.back_torso_outer     // back
+            ], true);
+            const bodyOuter = new THREE.Mesh(bodyOuterGeo, bodyOuterMats);
+            bodyOuter.position.copy(body.position);
+            playerModel.add(bodyOuter);
+            
+            // Create right arm with pivot at shoulder
+            rightArmPivot = new THREE.Group();
+            const ARM_POSITION_Y = BODY_POSITION_Y + (BODY_HEIGHT/2); // Top of body
+            rightArmPivot.position.set((-6/8) * s, ARM_POSITION_Y, 0);
+            playerModel.add(rightArmPivot);
+            
+            const rightArmGeo = new THREE.BoxGeometry((4/8) * s, (12/8) * s, (4/8) * s);
+            const rightArmMats = createBoxFaceMaterials(texture, [
+                skinMap.inside_right_arm,    // right
+                skinMap.outside_of_right_arm, // left
+                skinMap.top_of_right_arm,    // top
+                skinMap.right_hand,          // bottom
+                skinMap.front_right_arm,     // front
+                skinMap.back_right_arm       // back
+            ]);
+            const rightArm = new THREE.Mesh(rightArmGeo, rightArmMats);
+            rightArm.position.y = (-6/8) * s; // Half the arm length down from pivot
+            rightArm.castShadow = true;
+            rightArm.receiveShadow = true;
+            rightArmPivot.add(rightArm);
+            
+            // Create right arm outer layer
+            const rightArmOuterGeo = new THREE.BoxGeometry((4.5/8) * s, (12.5/8) * s, (4.5/8) * s);
+            const rightArmOuterMats = createBoxFaceMaterials(texture, [
+                skinMap.inside_right_arm_outer,    // right
+                skinMap.outside_of_right_arm_outer, // left
+                skinMap.top_of_right_arm_outer,    // top
+                skinMap.right_hand_outer,          // bottom
+                skinMap.front_right_arm_outer,     // front
+                skinMap.back_right_arm_outer       // back
+            ], true);
+            const rightArmOuter = new THREE.Mesh(rightArmOuterGeo, rightArmOuterMats);
+            rightArmOuter.position.copy(rightArm.position);
+            rightArmPivot.add(rightArmOuter);
+            
+            // Create left arm with pivot at shoulder
+            leftArmPivot = new THREE.Group();
+            leftArmPivot.position.set((6/8) * s, ARM_POSITION_Y, 0);
+            playerModel.add(leftArmPivot);
+            
+            const leftArmGeo = new THREE.BoxGeometry((4/8) * s, (12/8) * s, (4/8) * s);
+            const leftArmMats = createBoxFaceMaterials(texture, [
+                skinMap.outside_of_left_arm, // right
+                skinMap.inside_left_arm,     // left
+                skinMap.top_of_left_arm,     // top
+                skinMap.left_hand,           // bottom
+                skinMap.front_left_arm,      // front
+                skinMap.back_left_arm        // back
+            ]);
+            const leftArm = new THREE.Mesh(leftArmGeo, leftArmMats);
+            leftArm.position.y = (-6/8) * s; // Half the arm length down from pivot
+            leftArm.castShadow = true;
+            leftArm.receiveShadow = true;
+            leftArmPivot.add(leftArm);
+            
+            // Create left arm outer layer
+            const leftArmOuterGeo = new THREE.BoxGeometry((4.5/8) * s, (12.5/8) * s, (4.5/8) * s);
+            const leftArmOuterMats = createBoxFaceMaterials(texture, [
+                skinMap.outside_of_left_arm_outer, // right
+                skinMap.inside_left_arm_outer,     // left
+                skinMap.top_of_left_arm_outer,     // top
+                skinMap.left_hand_outer,           // bottom
+                skinMap.front_left_arm_outer,      // front
+                skinMap.back_left_arm_outer        // back
+            ], true);
+            const leftArmOuter = new THREE.Mesh(leftArmOuterGeo, leftArmOuterMats);
+            leftArmOuter.position.copy(leftArm.position);
+            leftArmPivot.add(leftArmOuter);
+            
+            // Create right leg with pivot at hip
+            rightLegPivot = new THREE.Group();
+            const HIP_POSITION_Y = BODY_POSITION_Y - (BODY_HEIGHT/2); // Bottom of torso
+            rightLegPivot.position.set((-2/8) * s, HIP_POSITION_Y, 0);
+            playerModel.add(rightLegPivot);
+            
+            const rightLegGeo = new THREE.BoxGeometry((4/8) * s, (12/8) * s, (4/8) * s);
+            const rightLegMats = createBoxFaceMaterials(texture, [
+                skinMap.inside_right_leg,    // right
+                skinMap.outside_of_right_leg, // left
+                skinMap.top_of_right_leg,    // top
+                skinMap.right_foot,          // bottom
+                skinMap.front_right_leg,     // front
+                skinMap.back_right_leg       // back
+            ]);
+            const rightLeg = new THREE.Mesh(rightLegGeo, rightLegMats);
+            rightLeg.position.y = (-6/8) * s; // Half the leg length down from pivot
+            rightLeg.castShadow = true;
+            rightLeg.receiveShadow = true;
+            rightLegPivot.add(rightLeg);
+            
+            // Create right leg outer layer
+            const rightLegOuterGeo = new THREE.BoxGeometry((4.5/8) * s, (12.5/8) * s, (4.5/8) * s);
+            const rightLegOuterMats = createBoxFaceMaterials(texture, [
+                skinMap.inside_right_leg_outer,    // right
+                skinMap.outside_of_right_leg_outer, // left
+                skinMap.top_of_right_leg_outer,    // top
+                skinMap.right_foot_outer,          // bottom
+                skinMap.front_right_leg_outer,     // front
+                skinMap.back_right_leg_outer       // back
+            ], true);
+            const rightLegOuter = new THREE.Mesh(rightLegOuterGeo, rightLegOuterMats);
+            rightLegOuter.position.copy(rightLeg.position);
+            rightLegPivot.add(rightLegOuter);
+            
+            // Create left leg with pivot at hip
+            leftLegPivot = new THREE.Group();
+            leftLegPivot.position.set((2/8) * s, HIP_POSITION_Y, 0);
+            playerModel.add(leftLegPivot);
+            
+            const leftLegGeo = new THREE.BoxGeometry((4/8) * s, (12/8) * s, (4/8) * s);
+            const leftLegMats = createBoxFaceMaterials(texture, [
+                skinMap.outside_of_left_leg, // right
+                skinMap.inside_left_leg,     // left
+                skinMap.top_of_left_leg,     // top
+                skinMap.left_foot,           // bottom
+                skinMap.front_left_leg,      // front
+                skinMap.back_left_leg        // back
+            ]);
+            const leftLeg = new THREE.Mesh(leftLegGeo, leftLegMats);
+            leftLeg.position.y = (-6/8) * s; // Half the leg length down from pivot
+            leftLeg.castShadow = true;
+            leftLeg.receiveShadow = true;
+            leftLegPivot.add(leftLeg);
+            
+            // Create left leg outer layer
+            const leftLegOuterGeo = new THREE.BoxGeometry((4.5/8) * s, (12.5/8) * s, (4.5/8) * s);
+            const leftLegOuterMats = createBoxFaceMaterials(texture, [
+                skinMap.outside_of_left_leg_outer, // right
+                skinMap.inside_left_leg_outer,     // left
+                skinMap.top_of_left_leg_outer,     // top
+                skinMap.left_foot_outer,           // bottom
+                skinMap.front_left_leg_outer,      // front
+                skinMap.back_left_leg_outer        // back
+            ], true);
+            const leftLegOuter = new THREE.Mesh(leftLegOuterGeo, leftLegOuterMats);
+            leftLegOuter.position.copy(leftLeg.position);
+            leftLegPivot.add(leftLegOuter);
+            
+            // Store references to the limbs for animation
+            playerModel.head = head;
+            playerModel.helmet = helmet;
+            playerModel.rightArmPivot = rightArmPivot;
+            playerModel.leftArmPivot = leftArmPivot;
+            playerModel.rightLegPivot = rightLegPivot;
+            playerModel.leftLegPivot = leftLegPivot;
+            
+            // Center the model in the display area
+            playerModel.position.y = 0; // Center the body at the origin
+            
+            // Add the model to the scene
+            scene.add(playerModel);
+            
+            // No ground plane - removed
+            
+            // Set rotation to face forward (0 instead of Math.PI)
+            rotationAngle = 0; // Face the camera directly
+        }
+
+        // Create box face materials with proper UV mapping based on the skinMap - FIXED for cross-origin
+        function createBoxFaceMaterials(texture, faceCoords, isOverlay = false) {
+            // Use the stored clean canvas if available (for uploaded images)
+            let sourceCanvas;
+            if (uploadedSkinCanvas && texture === uploadedSkinData) {
+                sourceCanvas = uploadedSkinCanvas;
+            } else {
+                // For generated textures (like green robot), create a new canvas
+                sourceCanvas = document.createElement('canvas');
+                const ctx = sourceCanvas.getContext('2d');
+                sourceCanvas.width = 64;
+                sourceCanvas.height = 64;
+                
+                // Draw texture on canvas
+                const img = texture.image;
+                ctx.drawImage(img, 0, 0);
+            }
+            
+            // Materials array for each face [right, left, top, bottom, front, back]
+            const materials = [];
+            
+            // Process each face
+            for (let i = 0; i < faceCoords.length; i++) {
+                const coord = faceCoords[i];
+                
+                if (!coord) {
+                    // If face mapping is missing, use a transparent material
+                    materials.push(new THREE.MeshBasicMaterial({ transparent: true, opacity: 0 }));
+                    continue;
+                }
+                
+                // Create a canvas for this face
+                const faceCanvas = document.createElement('canvas');
+                const faceCtx = faceCanvas.getContext('2d');
+                faceCanvas.width = coord[2];
+                faceCanvas.height = coord[3];
+                
+                // Extract the face from the source canvas
+                faceCtx.drawImage(
+                    sourceCanvas, 
+                    coord[0], coord[1], coord[2], coord[3], 
+                    0, 0, coord[2], coord[3]
+                );
+                
+                // For overlay layers, check if it's actually transparent
+                let hasOpaquePixels = false;
+                if (isOverlay) {
+                    try {
+                        const imageData = faceCtx.getImageData(0, 0, faceCanvas.width, faceCanvas.height);
+                        const data = imageData.data;
+                        for (let p = 3; p < data.length; p += 4) {
+                            if (data[p] > 20) { // Alpha value not fully transparent
+                                hasOpaquePixels = true;
+                                break;
+                            }
+                        }
+                    } catch (e) {
+                        // If we can't read image data, assume it has opaque pixels
+                        console.warn('Cannot check transparency for overlay, assuming opaque');
+                        hasOpaquePixels = true;
+                    }
+                }
+                
+                // If it's an overlay and has no opaque pixels, make it transparent
+                if (isOverlay && !hasOpaquePixels) {
+                    materials.push(new THREE.MeshBasicMaterial({ transparent: true, opacity: 0 }));
+                } else {
+                    // Create a texture from the face canvas
+                    const faceTex = new THREE.CanvasTexture(faceCanvas);
+                    faceTex.magFilter = THREE.NearestFilter;
+                    faceTex.minFilter = THREE.NearestFilter;
+                    
+                    // Create a material with the face texture
+                    const material = new THREE.MeshLambertMaterial({
+                        map: faceTex,
+                        transparent: isOverlay
+                    });
+                    
+                    materials.push(material);
+                }
+            }
+            
+            return materials;
+        }
+
+        function loadSkinTexture(file) {
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    // Validate image dimensions
+                    if (img.width !== 64 || (img.height !== 64 && img.height !== 32)) {
+                        updateStatus('⚠️ Warning: Skin should be 64x64 or 64x32 pixels for best results');
+                    }
+                    
+                    // Create texture from image
+                    const canvas = document.createElement('canvas');
+                    canvas.width = 64;
+                    canvas.height = 64;
+                    const ctx = canvas.getContext('2d');
+                    
+                    // Draw and scale the image to 64x64
+                    ctx.imageSmoothingEnabled = false; // Keep pixelated look
+                    ctx.drawImage(img, 0, 0, 64, 64);
+                    
+                    const texture = new THREE.CanvasTexture(canvas);
+                    texture.magFilter = THREE.NearestFilter;
+                    texture.minFilter = THREE.NearestFilter;
+                    texture.flipY = false; // Important for Minecraft skins
+                    
+                    // Store the uploaded skin data AND clean canvas for future use
+                    uploadedSkinData = texture;
+                    uploadedSkinCanvas = canvas; // Store the clean canvas for overlay detection
+                    
+                    // Create new model with texture
+                    createMinecraftModelWithTexture(texture, 0.9);
+                    
+                    currentSkinTexture = texture;
+                    updateStatus(`🎨 Custom skin loaded: ${file.name}`);
+                };
+                img.onerror = function() {
+                    updateStatus('❌ Failed to load skin image. Please check the file format.');
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function setupControlButtons() {
+            // Rotate left
+            document.getElementById('rotateLeft').addEventListener('click', () => {
+                if (playerModel) {
+                    rotationAngle += Math.PI / 4;
+                }
+            });
+            
+            // Rotate right
+            document.getElementById('rotateRight').addEventListener('click', () => {
+                if (playerModel) {
+                    rotationAngle -= Math.PI / 4;
+                }
+            });
+            
+            // Toggle running animation
+            document.getElementById('toggleRun').addEventListener('click', () => {
+                isRunning = !isRunning;
+                const btn = document.getElementById('toggleRun');
+                btn.textContent = isRunning ? '🚶 Walk' : '🏃 Walk';
+            });
+            
+            // Reset view
+            document.getElementById('resetView').addEventListener('click', () => {
+                if (playerModel) {
+                    playerModel.rotation.set(0, 0, 0);
+                    playerModel.position.set(0, 0, 0);
+                }
+                camera.position.set(0, 0.5, 4.5); // Reset camera to new position
+                camera.lookAt(0, 0.5, 0);
+                isRunning = false;
+                rotationAngle = 0; // Reset to face forward
+                document.getElementById('toggleRun').textContent = '🏃 Walk';
+            });
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            if (playerModel) {
+                // Smooth rotation to target angle
+                playerModel.rotation.y += (rotationAngle - playerModel.rotation.y) * 0.1;
+                
+                // Apply running animation if enabled
+                if (isRunning && rightArmPivot && leftArmPivot) {
+                    // Simple running animation - using scale factor for consistency
+                    const time = Date.now() * 0.005;
+                    const s = 0.9; // Same scale factor used in model creation
+                    const BODY_HEIGHT = (12/8) * s;
+                    const BODY_POSITION_Y = (4/8) * s;
+                    const HEAD_HEIGHT = (8/8) * s;
+                    const HEAD_POSITION_Y = BODY_POSITION_Y + (BODY_HEIGHT/2) + (HEAD_HEIGHT/2);
+                    
+                    // Swing arms at the shoulders
+                    rightArmPivot.rotation.x = Math.sin(time) * 0.5;
+                    leftArmPivot.rotation.x = Math.sin(time + Math.PI) * 0.5;
+                    
+                    // Swing legs at the hips
+                    rightLegPivot.rotation.x = Math.sin(time + Math.PI) * 0.5;
+                    leftLegPivot.rotation.x = Math.sin(time) * 0.5;
+                    
+                    // Slight head bobbing
+                    if (playerModel.head) {
+                        playerModel.head.rotation.x = Math.sin(time * 2) * 0.125;
+                        playerModel.head.position.y = HEAD_POSITION_Y + Math.sin(time * 2) * 0.05 * s;
+                        playerModel.helmet.position.y = playerModel.head.position.y;
+                    }
+                } else if (rightArmPivot && leftArmPivot) {
+                    // Reset rotations when not running
+                    rightArmPivot.rotation.x = 0;
+                    leftArmPivot.rotation.x = 0;
+                    rightLegPivot.rotation.x = 0;
+                    leftLegPivot.rotation.x = 0;
+                    
+                    if (playerModel.head) {
+                        playerModel.head.rotation.x = 0;
+                        // Reset head position to the correct position
+                        const s = 0.9; // Same scale factor
+                        const BODY_HEIGHT = (12/8) * s;
+                        const BODY_POSITION_Y = (4/8) * s;
+                        const HEAD_HEIGHT = (8/8) * s;
+                        const HEAD_POSITION_Y = BODY_POSITION_Y + (BODY_HEIGHT/2) + (HEAD_HEIGHT/2);
+                        playerModel.head.position.y = HEAD_POSITION_Y;
+                        playerModel.helmet.position.y = playerModel.head.position.y;
+                    }
+                }
+            }
+            
+            renderer.render(scene, camera);
+        }
+
+        function onWindowResize() {
+            if (camera && renderer && container) {
+                camera.aspect = container.clientWidth / container.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(container.clientWidth, container.clientHeight);
+            }
+        }
+
+        // AI Generation
+        aiGenerateBtn.addEventListener('click', generateAIConfiguration);
+
+        async function generateAIConfiguration() {
+            const userInput = aiInput.value.trim();
+            
+            if (!userInput) {
+                updateStatus('❌ Please enter a description for your bot');
+                return;
+            }
+            
+            // Show loading state
+            setAILoadingState(true);
+            updateStatus('🤖 Generating bot configuration from your description...');
+            
+            // Create a well-structured prompt for the LLM
+            const prompt = createBotConfigPrompt(userInput);
+            
+            try {
+                // Call Pollinations.ai API
+                const response = await fetch(`https://text.pollinations.ai/${encodeURIComponent(prompt)}`);
+                const textResponse = await response.text();
+                
+                // Process the response and extract JSON
+                const extractedData = extractJSONFromResponse(textResponse);
+                
+                if (extractedData && extractedData.static) {
+                    // Show success in modal
+                    showAIModal('success', extractedData);
+                    generatedConfigData = extractedData;
+                    updateStatus('🎉 Bot configuration generated successfully! Review and apply it.');
+                } else {
+                    // Show error in modal
+                    showAIModal('error', textResponse);
+                    updateStatus('❌ Could not parse the generated configuration. See details in the modal.');
+                }
+            } catch (error) {
+                console.error('Error generating bot configuration:', error);
+                showAIModal('error', `Error: ${error.message}`);
+                updateStatus('❌ Error connecting to AI service. Please try again.');
+            } finally {
+                setAILoadingState(false);
+            }
+        }
+
+        function createBotConfigPrompt(userInput) {
+            return `You are a bot configuration generator. Create a JSON configuration for a Minecraft bot based on the user's description.
+
+USER DESCRIPTION: "${userInput}"
+
+Generate ONLY a valid JSON object with this exact structure:
+
+{
+  "static": {
+    "name": "BotName",
+    "personDesc": "Bot personality description here",
+    "longtermThinking": "Bot goals and thinking patterns here",
+  },
+  "dynamic": [
+  ]
+}
+
+REQUIREMENTS:
+- Bot name: 3-20 characters, no spaces
+- PersonDesc: 100-300 characters describing personality
+- LongtermThinking: 100-300 characters describing goals
+
+Return ONLY the JSON object, no other text.`;
+        }
+
+        function extractJSONFromResponse(text) {
+            // Clean the text first - remove any markdown or extra formatting
+            const cleanText = text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
+            
+            try {
+                // Try to parse the cleaned response as JSON first
+                return JSON.parse(cleanText);
+            } catch (e) {
+                console.log('First parse failed, trying to extract JSON pattern...');
+                
+                // If that fails, look for JSON object pattern in the text
+                const jsonPattern = /\{[\s\S]*\}/;
+                const match = cleanText.match(jsonPattern);
+                
+                if (match) {
+                    try {
+                        const jsonStr = match[0];
+                        console.log('Extracted JSON string:', jsonStr);
+                        return JSON.parse(jsonStr);
+                    } catch (err) {
+                        console.error('Error parsing extracted JSON:', err);
+                        
+                        // Try to fix common JSON issues
+                        let fixedJson = match[0];
+                        
+                        // Fix trailing commas
+                        fixedJson = fixedJson.replace(/,(\s*[}\]])/g, '$1');
+                        
+                        // Fix unquoted keys
+                        fixedJson = fixedJson.replace(/([{,]\s*)([a-zA-Z_][a-zA-Z0-9_]*)\s*:/g, '$1"$2":');
+                        
+                        try {
+                            console.log('Trying fixed JSON:', fixedJson);
+                            return JSON.parse(fixedJson);
+                        } catch (fixErr) {
+                            console.error('Fixed JSON also failed:', fixErr);
+                            return null;
+                        }
+                    }
+                }
+                
+                console.error('No JSON pattern found in response');
+                return null;
+            }
+        }
+
+        function setAILoadingState(isLoading) {
+            if (isLoading) {
+                aiLoadingSpinner.style.display = 'inline-block';
+                aiBtnText.textContent = 'Generating...';
+                aiGenerateBtn.disabled = true;
+            } else {
+                aiLoadingSpinner.style.display = 'none';
+                aiBtnText.textContent = '🤖 Generate Config';
+                aiGenerateBtn.disabled = false;
+            }
+        }
+
+        function showAIModal(type, data) {
+            aiModal.classList.add('active');
+            
+            if (type === 'success') {
+                // Preview of what will be created
+                const staticData = data.static || {};
+                const dynamicCount = data.dynamic ? data.dynamic.length : 0;
+                
+                aiModalMessage.classList.remove('ai-error');
+                aiModalMessage.innerHTML = `
+                    <p>✅ Successfully generated bot configuration:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.6;">
+                        <li><strong>Name:</strong> ${staticData.name || 'Unknown'}</li>
+                        <li><strong>API Provider:</strong> ${staticData.apiProvider || 'Not set'}</li>
+                        <li><strong>Model:</strong> ${staticData.modelName || 'Not set'}</li>
+                        <li><strong>Thinking Time:</strong> ${staticData.thinkingInterval || 30} seconds</li>
+                        <li><strong>Dynamic Fields:</strong> ${dynamicCount}</li>
+                    </ul>
+                    <div style="margin-top: 15px; padding: 10px; background: #f0f8ff; border-radius: 4px; font-size: 13px;">
+                        <strong>Personality:</strong><br>
+                        ${staticData.personDesc ? staticData.personDesc.substring(0, 200) + (staticData.personDesc.length > 200 ? '...' : '') : 'Not set'}
+                    </div>
+                    <p style="margin-top: 15px; color: #2e7d32; font-weight: bold;">Ready to apply this configuration?</p>
+                `;
+                aiApplyBtn.style.display = 'block';
+            } else {
+                // Error message
+                aiModalMessage.classList.add('ai-error');
+                aiModalMessage.innerHTML = `
+                    <p>❌ There was a problem generating your bot configuration:</p>
+                    <div style="margin-top: 10px; font-size: 12px; max-height: 200px; overflow-y: auto; background: #fff; padding: 10px; border-radius: 4px; border: 1px solid #ddd;">
+                        <pre style="white-space: pre-wrap; margin: 0;">${data}</pre>
+                    </div>
+                    <p style="margin-top: 15px; font-weight: bold;">💡 Tips for better results:</p>
+                    <ul style="margin-left: 20px; margin-top: 5px; font-size: 13px;">
+                        <li>Be specific about the bot's purpose</li>
+                        <li>Mention the type of tasks it should handle</li>
+                        <li>Include desired personality traits</li>
+                    </ul>
+                `;
+                aiApplyBtn.style.display = 'none';
+            }
+        }
+
+        function closeAIModal() {
+            aiModal.classList.remove('active');
+        }
+
+        function applyAIConfiguration() {
+            if (!generatedConfigData) {
+                updateStatus('❌ No configuration data to apply');
+                return;
+            }
+            
+            try {
+                // Apply the static data
+                if (generatedConfigData.static) {
+                    const staticData = generatedConfigData.static;
+                    document.getElementById('bot-name').value = staticData.name || '';
+                    document.getElementById('skin-model').value = staticData.skin?.model || '';
+                    document.getElementById('person-desc').value = staticData.personDesc || '';
+                    document.getElementById('longterm-thinking').value = staticData.longtermThinking || '';
+                    document.getElementById('api-provider').value = staticData.apiProvider || '';
+                    document.getElementById('model-name').value = staticData.modelName || '';
+                    document.getElementById('thinking-interval').value = staticData.thinkingInterval || null;
+                    
+                    // Handle skin file path
+                    const skinPath = staticData.skin?.filepath || '';
+                    if (skinPath) {
+                        skinFilePath.textContent = skinPath;
+                        skinFilePath.setAttribute('title', skinPath);
+                    } else {
+                        skinFilePath.textContent = 'No file selected';
+                        skinFilePath.removeAttribute('title');
+                    }
+                }
+                
+                // Apply the dynamic fields
+                if (generatedConfigData.dynamic && Array.isArray(generatedConfigData.dynamic)) {
+                    dynamicFields = generatedConfigData.dynamic.map(field => ({
+                        name: field.name || 'unnamed_field',
+                        type: field.type || 'text',
+                        value: field.value || '',
+                        options: Array.isArray(field.options) ? field.options : []
+                    }));
+                    renderDynamicFields();
+                }
+                
+                // Close modal
+                closeAIModal();
+                
+                // Update status and configuration
+                updateConfigStatus();
+                updateStatus('🎉 AI-generated bot configuration applied successfully!');
+                
+            } catch (error) {
+                console.error('Error applying configuration:', error);
+                updateStatus('❌ Error applying configuration. Please try again.');
+            }
+        }
+
+        function setupEventListeners() {
+            // Event listeners
+            newFieldType.addEventListener('change', function() {
+                toggleOptionsField(this.value, optionsField);
+            });
+
+            editFieldType.addEventListener('change', function() {
+                toggleOptionsField(this.value, editOptionsField);
+            });
+
+            // Add event listeners for static fields to update status
+            const staticInputs = [
+                'bot-name', 'skin-model', 'person-desc',
+                'longterm-thinking', 'api-provider', 'model-name', 'thinking-interval'
+            ];
+            
+            staticInputs.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.addEventListener('input', updateConfigStatus);
+                    element.addEventListener('change', updateConfigStatus);
+                }
+            });
+            
+            // Add Enter key support for field creation
+            document.getElementById('new-field-name').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    addDynamicField();
+                }
+            });
+            
+            document.getElementById('new-field-value').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    addDynamicField();
+                }
+            });
+
+            // Add Enter key support for AI generation
+            aiInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    generateAIConfiguration();
+                }
+            });
+        }
+
+        // Handle skin file selection - MODIFIED to make uploaded image the new default
+        function handleSkinFileSelect(input) {
+            const file = input.files[0];
+            if (file) {
+                skinFilePath.textContent = file.name;
+                skinFilePath.setAttribute('title', file.name);
+                updateStatus(`📂 Skin file selected: ${file.name}`);
+                updateConfigStatus();
+                
+                // Load the skin texture into the 3D model AND store as new default
+                loadSkinTexture(file);
+            } else {
+                skinFilePath.textContent = 'No file selected';
+                skinFilePath.removeAttribute('title');
+                updateConfigStatus();
+            }
+        }
+
+        // Toggle options field visibility
+        function toggleOptionsField(type, optionsElement) {
+            if (type === 'select') {
+                optionsElement.style.display = 'block';
+            } else {
+                optionsElement.style.display = 'none';
+            }
+        }
+
+        // Add dynamic field
+        function addDynamicField() {
+            const name = document.getElementById('new-field-name').value.trim();
+            const type = document.getElementById('new-field-type').value;
+            const value = document.getElementById('new-field-value').value.trim();
+            const options = document.getElementById('new-field-options').value.trim();
+
+            if (!name) {
+                updateStatus('❌ Please enter a field name');
+                return;
+            }
+
+            // Check for duplicate names
+            if (dynamicFields.some(field => field.name === name)) {
+                updateStatus('❌ Field name already exists');
+                return;
+            }
+
+            const field = {
+                name: name,
+                type: type,
+                value: value,
+                options: type === 'select' ? options.split(',').map(opt => opt.trim()).filter(opt => opt) : []
+            };
+
+            dynamicFields.push(field);
+            renderDynamicFields();
+            clearFieldCreator();
+            updateStatus(`✅ Field "${name}" added successfully`);
+            updateConfigStatus();
+        }
+
+        // Clear field creator
+        function clearFieldCreator() {
+            document.getElementById('new-field-name').value = '';
+            document.getElementById('new-field-type').value = 'text';
+            document.getElementById('new-field-value').value = '';
+            document.getElementById('new-field-options').value = '';
+            optionsField.style.display = 'none';
+        }
+
+        // Render dynamic fields
+        function renderDynamicFields() {
+            if (dynamicFields.length === 0) {
+                dynamicFieldsContainer.innerHTML = '<p style="text-align: center; color: #666; font-style: italic;">No dynamic fields added yet</p>';
+                return;
+            }
+
+            dynamicFieldsContainer.innerHTML = dynamicFields.map((field, index) => `
+                <div class="dynamic-field-item">
+                    <div class="field-header">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span class="field-title">${field.name}</span>
+                            <span class="field-type">${field.type}</span>
+                        </div>
+                        <div class="field-actions">
+                            <button class="action-btn edit-btn" onclick="editField(${index})">✏️ Edit</button>
+                            <button class="action-btn delete-btn" onclick="deleteField(${index})">🗑️ Delete</button>
+                        </div>
+                    </div>
+                    <div class="field-value">
+                        ${field.type === 'select' && field.options.length > 0 
+                            ? `Options: ${field.options.join(', ')}<br>` 
+                            : ''}
+                        Default: ${field.value || '<em>No default value</em>'}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Edit field
+        function editField(index) {
+            editingFieldIndex = index;
+            const field = dynamicFields[index];
+            
+            document.getElementById('edit-field-name').value = field.name;
+            document.getElementById('edit-field-type').value = field.type;
+            document.getElementById('edit-field-value').value = field.value;
+            document.getElementById('edit-field-options').value = field.options.join(', ');
+            
+            toggleOptionsField(field.type, editOptionsField);
+            editModal.classList.add('active');
+        }
+
+        // Save edited field
+        function saveEditedField() {
+            if (editingFieldIndex === -1) return;
+
+            const name = document.getElementById('edit-field-name').value.trim();
+            const type = document.getElementById('edit-field-type').value;
+            const value = document.getElementById('edit-field-value').value.trim();
+            const options = document.getElementById('edit-field-options').value.trim();
+
+            if (!name) {
+                updateStatus('❌ Please enter a field name');
+                return;
+            }
+
+            // Check for duplicate names (excluding current field)
+            if (dynamicFields.some((field, index) => field.name === name && index !== editingFieldIndex)) {
+                updateStatus('❌ Field name already exists');
+                return;
+            }
+
+            dynamicFields[editingFieldIndex] = {
+                name: name,
+                type: type,
+                value: value,
+                options: type === 'select' ? options.split(',').map(opt => opt.trim()).filter(opt => opt) : []
+            };
+
+            renderDynamicFields();
+            closeEditModal();
+            updateStatus(`✅ Field "${name}" updated successfully`);
+            updateConfigStatus();
+        }
+
+        // Close edit modal
+        function closeEditModal() {
+            editModal.classList.remove('active');
+            editingFieldIndex = -1;
+        }
+
+        // Delete field
+        function deleteField(index) {
+            const fieldName = dynamicFields[index].name;
+            if (confirm(`Are you sure you want to delete the field "${fieldName}"?`)) {
+                dynamicFields.splice(index, 1);
+                renderDynamicFields();
+                updateStatus(`🗑️ Field "${fieldName}" deleted`);
+                updateConfigStatus();
+            }
+        }
+
+        // Export configuration
+       // Export configuration with format selection
+        function exportConfiguration() {
+            // Show format selection modal
+            showExportFormatModal();
+        }
+
+        function showExportFormatModal() {
+            // Create modal if it doesn't exist
+            let exportModal = document.getElementById('export-format-modal');
+            if (!exportModal) {
+                exportModal = document.createElement('div');
+                exportModal.id = 'export-format-modal';
+                exportModal.className = 'modal';
+                exportModal.innerHTML = `
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">📦 Export Configuration</h3>
+                            <button class="modal-close" onclick="closeExportModal()">×</button>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <p style="margin-bottom: 15px; color: #4a4a4a;">Choose the export format for your bot configuration:</p>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 15px;">
+                                <div style="border: 2px solid #8b4513; border-radius: 6px; padding: 15px; cursor: pointer; transition: all 0.2s;" onclick="selectExportFormat('minecraft-ai')" id="format-minecraft-ai">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                        <input type="radio" name="export-format" value="minecraft-ai" id="radio-minecraft-ai">
+                                        <label for="radio-minecraft-ai" style="font-weight: bold; font-size: 14px;">Minecraft AI Format</label>
+                                    </div>
+                                    <p style="font-size: 12px; color: #666; margin: 0;">Standard format with separate model API configuration</p>
+                                </div>
+                                
+                                <div style="border: 2px solid #8b4513; border-radius: 6px; padding: 15px; cursor: pointer; transition: all 0.2s;" onclick="selectExportFormat('minecraft-ai-python')" id="format-minecraft-ai-python">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                        <input type="radio" name="export-format" value="minecraft-ai-python" id="radio-minecraft-ai-python">
+                                        <label for="radio-minecraft-ai-python" style="font-weight: bold; font-size: 14px;">Minecraft AI-Python Format</label>
+                                    </div>
+                                    <p style="font-size: 12px; color: #666; margin: 0;">Python version format with simplified structure</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-actions">
+                            <button class="modal-btn secondary" onclick="closeExportModal()">Cancel</button>
+                            <button class="modal-btn primary" onclick="confirmExport()" id="export-confirm-btn" disabled>Export Configuration</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(exportModal);
+            }
+            
+            // Reset selection
+            document.querySelectorAll('input[name="export-format"]').forEach(radio => {
+                radio.checked = false;
+            });
+            document.getElementById('export-confirm-btn').disabled = true;
+            
+            exportModal.classList.add('active');
+        }
+
+        function selectExportFormat(format) {
+            // Update radio selection
+            document.getElementById(`radio-${format}`).checked = true;
+            
+            // Update visual selection
+            document.querySelectorAll('[id^="format-"]').forEach(div => {
+                div.style.background = '';
+                div.style.borderColor = '#8b4513';
+            });
+            
+            document.getElementById(`format-${format}`).style.background = 'rgba(76, 175, 80, 0.1)';
+            document.getElementById(`format-${format}`).style.borderColor = '#4CAF50';
+            
+            // Enable export button
+            document.getElementById('export-confirm-btn').disabled = false;
+        }
+
+        function closeExportModal() {
+            const modal = document.getElementById('export-format-modal');
+            if (modal) {
+                modal.classList.remove('active');
+            }
+        }
+
+        function confirmExport() {
+            const selectedFormat = document.querySelector('input[name="export-format"]:checked');
+            if (!selectedFormat) {
+                updateStatus('❌ Please select an export format');
+                return;
+            }
+            
+            const format = selectedFormat.value;
+            const skinFileInput = document.getElementById('skin-file-input');
+            const botName = document.getElementById('bot-name').value.trim() || 'bot';
+            
+            let config;
+            let filename;
+            
+            if (format === 'minecraft-ai-python') {
+                // Minecraft AI-Python format
+                config = {
+                    username: botName,
+                    profile: document.getElementById('person-desc').value.trim(),
+                    longterm_thinking: document.getElementById('longterm-thinking').value.trim(),
+                    skin: {
+                        file: skinFileInput.files[0] ? skinFileInput.files[0] : null, 
+                    },
+                    self_driven_thinking_timer: (parseInt(document.getElementById('thinking-interval').value) || 30) * 1000, // Convert to milliseconds
+                    provider: mapApiProviderToPython(document.getElementById('api-provider').value),
+                    model: document.getElementById('model-name').value.trim()
+                };
+                
+                // Add dynamic fields as additional properties
+                dynamicFields.forEach(field => {
+                    config[field.name] = convertFieldValue(field);
+                });
+                
+                filename = `${botName.toLowerCase()}.json`;
+                
+            } else {
+                // Minecraft AI format
+                config = {
+                    name: botName,
+                    skin: {
+                        model: document.getElementById('skin-model').value,
+                        file: skinFileInput.files[0] ? skinFileInput.files[0] : null, 
+                    },
+                    person_desc: document.getElementById('person-desc').value.trim(),
+                    longterm_thiking: document.getElementById('longterm-thinking').value.trim(), // Note: keeping original typo from example
+                    model: {
+                        api: document.getElementById('api-provider').value,
+                        model: document.getElementById('model-name').value.trim()
+                    }
+                };
+                
+                // Add dynamic fields as additional properties
+                dynamicFields.forEach(field => {
+                    config[field.name] = convertFieldValue(field);
+                });
+                
+                filename = `${botName.toLowerCase()}.json`;
+            }
+
+            // Create and download the file
+            const blob = new Blob([JSON.stringify(config, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            closeExportModal();
+            updateStatus(`📦 Configuration exported successfully in ${format} format`);
+        }
+
+        function mapApiProviderToPython(provider) {
+            // Map API provider names to Python format conventions
+            const providerMap = {
+                'openai': 'OpenAI',
+                'anthropic': 'Anthropic',
+                'google': 'Google',
+                'deepseek': 'DeepSeek',
+                'ollama': 'Ollama',
+                'pollinations': 'Pollinations',
+                'openrouter': 'OpenRouter',
+                'qwen': '',
+                'doubao': 'Doubao',
+                '': 'OpenAI' // Default fallback
+            };
+            
+            return providerMap[provider] || provider || 'OpenAI';
+        }
+
+        function convertFieldValue(field) {
+            // Convert field values based on type
+            switch (field.type) {
+                case 'number':
+                    const num = parseFloat(field.value);
+                    return isNaN(num) ? 0 : num;
+                case 'boolean':
+                    return field.value === 'true' || field.value === true;
+                case 'select':
+                    return field.value;
+                default:
+                    return field.value;
+            }
+        } 
+
+        // Import configuration
+        
+        // Import configuration with automatic format detection
+        function importConfiguration(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const config = JSON.parse(e.target.result);
+                    const detectedFormat = detectConfigurationFormat(config);
+                    
+                    if (detectedFormat) {
+                        loadConfiguration(config, detectedFormat);
+                        updateStatus(`📦 Configuration imported successfully (${detectedFormat} format detected)`);
+                    } else {
+                        updateStatus('❌ Unrecognized configuration format');
+                        showImportError('The imported JSON file does not match any known configuration format.');
+                    }
+                } catch (error) {
+                    console.error('Import error:', error);
+                    updateStatus('❌ Failed to import configuration - Invalid JSON file');
+                    showImportError('The file contains invalid JSON data.');
+                }
+            };
+            reader.readAsText(file);
+            input.value = "";
+        }
+
+        // Detect configuration format based on structure and field names
+        function detectConfigurationFormat(config) {
+            // Check for Minecraft AI-Python format indicators
+            const hasPythonFields = config.hasOwnProperty('username') && 
+                                config.hasOwnProperty('profile') && 
+                                config.hasOwnProperty('provider') &&
+                                config.hasOwnProperty('self_driven_thinking_timer');
+            
+            // Check for Minecraft AI format indicators
+            const hasStandardFields = config.hasOwnProperty('name') && 
+                                    config.hasOwnProperty('person_desc') && 
+                                    config.hasOwnProperty('model') && 
+                                    typeof config.model === 'object' &&
+                                    config.model.hasOwnProperty('api');
+            
+            // Check for legacy format (original app format)
+            const hasLegacyFields = config.hasOwnProperty('static') && 
+                                config.hasOwnProperty('dynamic');
+            
+            if (hasPythonFields) {
+                return 'minecraft-ai-python';
+            } else if (hasStandardFields) {
+                return 'minecraft-ai';
+            } else if (hasLegacyFields) {
+                return 'legacy';
+            } else {
+                return null; // Unknown format
+            }
+        }
+
+        // Enhanced load configuration function with format-specific handling
+        function loadConfiguration(config, format) {
+            // Clear existing configuration first
+            clearConfigurationSilently();
+            
+            if (format === 'minecraft-ai-python') {
+                loadMinecraftAIPythonFormat(config);
+            } else if (format === 'minecraft-ai') {
+                loadMinecraftAIFormat(config);
+            } else if (format === 'legacy') {
+                loadLegacyFormat(config);
+            }
+            
+            updateConfigStatus();
+        }
+
+        // Load Minecraft AI-Python format
+        function loadMinecraftAIPythonFormat(config) {
+            // Map Python format to form fields
+            document.getElementById('bot-name').value = config.username || '';
+            document.getElementById('person-desc').value = config.profile || '';
+            document.getElementById('longterm-thinking').value = config.longterm_thinking || '';
+            
+            // Convert thinking timer from milliseconds to seconds
+            document.getElementById('thinking-interval').value = config.self_driven_thinking_timer || null;
+            
+            // Map provider (reverse mapping)
+            const provider = mapPythonProviderToStandard(config.provider);
+            document.getElementById('api-provider').value = provider;
+            document.getElementById('model-name').value = config.model || '';
+            
+            // Handle skin file path
+            if (config.skin && config.skin.file) {
+                const skinPath = extractFilenameFromPath(config.skin.file);
+                skinFilePath.textContent = skinPath;
+                skinFilePath.setAttribute('title', config.skin.file);
+            }
+            
+            // Set default skin model (Python format doesn't specify, assume classic)
+            document.getElementById('skin-model').value = 'classic';
+            
+            // Extract dynamic fields (any additional properties)
+            extractDynamicFieldsFromConfig(config, ['username', 'profile', 'longterm_thinking', 'skin', 'self_driven_thinking_timer', 'provider', 'model']);
+        }
+
+        // Load Minecraft AI format
+        function loadMinecraftAIFormat(config) {
+            // Map standard format to form fields
+            document.getElementById('bot-name').value = config.name || '';
+            document.getElementById('person-desc').value = config.person_desc || '';
+            
+            // Handle the typo in longterm_thiking vs longterm_thinking
+            const longtermText = config.longterm_thiking || config.longterm_thinking || '';
+            document.getElementById('longterm-thinking').value = longtermText;
+            
+            // Handle model configuration
+            if (config.model) {
+                document.getElementById('api-provider').value = config.model.api || '';
+                document.getElementById('model-name').value = config.model.model || '';
+            }
+            
+            // Handle thinking interval
+            document.getElementById('thinking-interval').value = null;
+            
+            // Handle skin configuration
+            if (config.skin) {
+                document.getElementById('skin-model').value = config.skin.model || 'classic';
+                if (config.skin.file) {
+                    const skinPath = extractFilenameFromPath(config.skin.file);
+                    skinFilePath.textContent = skinPath;
+                    skinFilePath.setAttribute('title', config.skin.file);
+                }
+            }
+            
+            // Extract dynamic fields (any additional properties)
+            extractDynamicFieldsFromConfig(config, ['name', 'person_desc', 'longterm_thiking', 'longterm_thinking', 'skin', 'model', 'thinking_interval']);
+        }
+
+        // Load legacy format (original app format)
+        function loadLegacyFormat(config) {
+            // Load static fields
+            if (config.static) {
+                document.getElementById('bot-name').value = config.static.name || '';
+                document.getElementById('skin-model').value = config.static.skin?.model || '';
+                document.getElementById('person-desc').value = config.static.personDesc || '';
+                document.getElementById('longterm-thinking').value = config.static.longtermThinking || '';
+                document.getElementById('api-provider').value = config.static.apiProvider || '';
+                document.getElementById('model-name').value = config.static.modelName || '';
+                document.getElementById('thinking-interval').value = config.static.thinkingInterval || null;
+                
+                // Handle skin file path
+                const skinPath = config.static.skin?.filepath || '';
+                if (skinPath) {
+                    skinFilePath.textContent = skinPath;
+                    skinFilePath.setAttribute('title', skinPath);
+                } else {
+                    skinFilePath.textContent = 'No file selected';
+                    skinFilePath.removeAttribute('title');
+                }
+            }
+
+            // Load dynamic fields
+            dynamicFields = config.dynamic || [];
+            renderDynamicFields();
+        }
+
+        // Helper function to map Python provider names back to standard format
+        function mapPythonProviderToStandard(pythonProvider) {
+            if (!pythonProvider) return '';
+            
+            const providerMap = {
+                'OpenAI': 'openai',
+                'DeepSeek': 'deepseek',
+                'Pollinations': 'pollinations',
+                'Anthropic' : 'anthropic',
+                'Google': 'google',
+                'Ollama': 'ollama',
+                'OpenRouter': 'openrouter',
+                'Qwen': 'qwen',
+                'Doubao': 'doubao',
+            };
+            
+            return providerMap[pythonProvider] || pythonProvider.toLowerCase();
+        }
+
+        // Helper function to extract filename from full path
+        function extractFilenameFromPath(fullPath) {
+            if (!fullPath) return '';
+            
+            // Handle both Windows and Unix path separators
+            const parts = fullPath.split(/[/\\]/);
+            return parts[parts.length - 1];
+        }
+
+        // Helper function to extract dynamic fields from config
+        function extractDynamicFieldsFromConfig(config, excludeFields) {
+            dynamicFields = [];
+            
+            Object.keys(config).forEach(key => {
+                if (!excludeFields.includes(key)) {
+                    const value = config[key];
+                    const field = {
+                        name: key,
+                        type: inferFieldType(value),
+                        value: String(value),
+                        options: []
+                    };
+                    
+                    // If it's a boolean, add boolean options
+                    if (field.type === 'boolean') {
+                        field.options = [];
+                    }
+                    
+                    dynamicFields.push(field);
+                }
+            });
+            
+            renderDynamicFields();
+        }
+
+        // Helper function to infer field type from value
+        function inferFieldType(value) {
+            if (typeof value === 'boolean') {
+                return 'boolean';
+            } else if (typeof value === 'number') {
+                return 'number';
+            } else if (typeof value === 'string') {
+                // Check if it's a long text (potential textarea)
+                if (value.length > 100) {
+                    return 'textarea';
+                }
+                return 'text';
+            } else {
+                return 'text'; // Default fallback
+            }
+        }
+
+        // Helper function to clear configuration without user confirmation
+        function clearConfigurationSilently() {
+            // Clear static fields
+            document.getElementById('bot-name').value = '';
+            document.getElementById('skin-model').value = '';
+            document.getElementById('person-desc').value = '';
+            document.getElementById('longterm-thinking').value = '';
+            document.getElementById('api-provider').value = '';
+            document.getElementById('model-name').value = '';
+            document.getElementById('thinking-interval').value = '';
+            
+            // Clear skin file input
+            document.getElementById('skin-file-input').value = '';
+            skinFilePath.textContent = 'No file selected';
+            skinFilePath.removeAttribute('title');
+            
+            // Clear dynamic fields
+            dynamicFields = [];
+            renderDynamicFields();
+            clearFieldCreator();
+        }
+
+        // Show import error modal
+        function showImportError(message) {
+            // Create error modal if it doesn't exist
+            let errorModal = document.getElementById('import-error-modal');
+            if (!errorModal) {
+                errorModal = document.createElement('div');
+                errorModal.id = 'import-error-modal';
+                errorModal.className = 'modal';
+                errorModal.innerHTML = `
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">❌ Import Error</h3>
+                            <button class="modal-close" onclick="closeImportErrorModal()">×</button>
+                        </div>
+                        <div id="import-error-message" style="margin-bottom: 20px; padding: 15px; background: #ffebee; border-left: 4px solid #f44336; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <p style="font-weight: bold; margin-bottom: 10px;">Supported formats:</p>
+                            <ul style="margin-left: 20px; line-height: 1.6;">
+                                <li><strong>Minecraft AI Format:</strong> Standard format with model.api structure</li>
+                                <li><strong>Minecraft AI-Python Format:</strong> Python version with username and provider fields</li>
+                                <li><strong>Legacy Format:</strong> Original app format with static/dynamic structure</li>
+                            </ul>
+                        </div>
+                        <div class="modal-actions">
+                            <button class="modal-btn secondary" onclick="closeImportErrorModal()">Close</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(errorModal);
+            }
+            
+            document.getElementById('import-error-message').textContent = message;
+            errorModal.classList.add('active');
+        }
+
+        function closeImportErrorModal() {
+            const modal = document.getElementById('import-error-modal');
+            if (modal) {
+                modal.classList.remove('active');
+            }
+        }
+
+        // Clear configuration - MODIFIED to preserve uploaded skin
+        function clearConfiguration() {
+            if (confirm('Are you sure you want to clear all configuration data? (Uploaded skin will be preserved)')) {
+                // Clear static fields
+                document.getElementById('bot-name').value = '';
+                document.getElementById('skin-model').value = '';
+                document.getElementById('person-desc').value = '';
+                document.getElementById('longterm-thinking').value = '';
+                document.getElementById('api-provider').value = '';
+                document.getElementById('model-name').value = '';
+                document.getElementById('thinking-interval').value = '';
+                
+                // Clear skin file input but preserve the uploaded skin data
+                document.getElementById('skin-file-input').value = '';
+                skinFilePath.textContent = 'No file selected';
+                skinFilePath.removeAttribute('title');
+                
+                // Note: uploadedSkinData and uploadedSkinCanvas are NOT cleared
+
+                // Clear dynamic fields
+                dynamicFields = [];
+                renderDynamicFields();
+                clearFieldCreator();
+                
+                updateStatus('🧹 Configuration cleared (uploaded skin preserved)');
+                updateConfigStatus();
+            }
+        }
+
+        // Update status
+        function updateStatus(message) {
+            statusText.textContent = message;
+        }
+
+        // Update configuration status
+        function updateConfigStatus() {
+            const hasStaticData = document.getElementById('bot-name').value.trim() !== '';
+            const hasDynamicData = dynamicFields.length > 0;
+            const hasSkinFile = document.getElementById('skin-file-input').files.length > 0;
+            
+            if (hasStaticData && hasDynamicData) {
+                configStatus.textContent = 'Complete';
+            } else if (hasStaticData || hasDynamicData) {
+                configStatus.textContent = 'Partial';
+            } else {
+                configStatus.textContent = 'Empty';
+            }
+
+            // Update session info - show uploaded skin status even without file input
+            const skinStatus = (hasSkinFile || uploadedSkinData) ? 'Set' : 'Not Set';
+            sessionInfo.textContent = `Fields: ${dynamicFields.length} | Skin: ${skinStatus}`;
+        }
+
+        console.log('🤖 Minecraft Bot Configuration Creator with Cross-Origin Fix loaded successfully!');
+    </script>
+
+
+
+
+</body></html>
