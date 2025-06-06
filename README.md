@@ -4,14 +4,14 @@ Web Application: [Original Character fo Minecraft AI](https://minecraft-ai-oc-cr
 
 A web app to create or edit the configuration of AI original character for Minecraft AI.
 
+![Screenshot 2025-06-06 at 21.03.06.png](https://s2.loli.net/2025/06/06/jVRFv8He2WgzOoa.png)
+
 The configuration generation is powered by [Pollinations.AI](https://pollinations.ai/)!
 
 ## Minecraft AI
 🦾 This is created by Minecraft AI, welcome to join the our Discord server for more communications! 
 
 <a href="https://discord.gg/RKjspnTBmb" target="_blank"><img src="https://s2.loli.net/2025/04/18/CEjdFuZYA4pKsQD.png" alt="Official Discord Server" width="180" height="32"></a>
-
-![Screenshot 2025-06-06 at 21.03.06.png](https://s2.loli.net/2025/06/06/jVRFv8He2WgzOoa.png)
 
 ## Other Projects of Minecraft AI
 
