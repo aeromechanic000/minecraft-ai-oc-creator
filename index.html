@@ -2310,22 +2310,8 @@ Return ONLY the JSON object, no other text.`;
                 if (generatedConfigData.static) {
                     const staticData = generatedConfigData.static;
                     document.getElementById('bot-name').value = staticData.name || '';
-                    document.getElementById('skin-model').value = staticData.skin?.model || '';
                     document.getElementById('person-desc').value = staticData.personDesc || '';
                     document.getElementById('longterm-thinking').value = staticData.longtermThinking || '';
-                    document.getElementById('api-provider').value = staticData.apiProvider || '';
-                    document.getElementById('model-name').value = staticData.modelName || '';
-                    document.getElementById('thinking-interval').value = staticData.thinkingInterval || null;
-                    
-                    // Handle skin file path
-                    const skinPath = staticData.skin?.filepath || '';
-                    if (skinPath) {
-                        skinFilePath.textContent = skinPath;
-                        skinFilePath.setAttribute('title', skinPath);
-                    } else {
-                        skinFilePath.textContent = 'No file selected';
-                        skinFilePath.removeAttribute('title');
-                    }
                 }
                 
                 // Apply the dynamic fields
