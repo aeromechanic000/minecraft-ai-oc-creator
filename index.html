@@ -2192,30 +2192,6 @@ REQUIREMENTS FOR LONGTERM THINKING (150-300 characters):
 
 Return ONLY the JSON object, no other text.`;
 }
-        function createBotConfigPrompt(userInput) {
-            return `You are a bot configuration generator. Create a JSON configuration for a Minecraft bot based on the user's description.
-
-USER DESCRIPTION: "${userInput}"
-
-Generate ONLY a valid JSON object with this exact structure:
-
-{
-  "static": {
-    "name": "BotName",
-    "personDesc": "Bot personality description here",
-    "longtermThinking": "Bot goals and thinking patterns here",
-  },
-  "dynamic": [
-  ]
-}
-
-REQUIREMENTS:
-- Bot name: 3-20 characters, no spaces
-- PersonDesc: 100-300 characters describing personality
-- LongtermThinking: 100-300 characters describing goals
-
-Return ONLY the JSON object, no other text.`;
-        }
 
         function extractJSONFromResponse(text) {
             // Clean the text first - remove any markdown or extra formatting
