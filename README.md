@@ -1,6 +1,6 @@
 # Original Character for Minecraft AI
 
-Web Application: [Original Character fo Minecraft AI](https://minecraft-ai-oc-creator.vercel.app/)
+Web Application: [Original Character for Minecraft AI](https://minecraft-ai-oc-creator.vercel.app/)
 
 A web app to create or edit the configuration of AI original character for Minecraft AI.
 
